@@ -8,4 +8,5 @@ int main (int argc, char * argv[]) {
     printf("\n\n\t\t\t\t\t\tHello, %s\n\n", name);
     // indenting using tab (\t)
     // newlines using \n
+    return 0;
 }
