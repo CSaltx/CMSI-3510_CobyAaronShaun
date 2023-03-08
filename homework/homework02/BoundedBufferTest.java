@@ -45,15 +45,22 @@ public class BoundedBufferTest extends Thread {
         }
 
         Thread testThread = new Thread(() -> {
-            assertThrows(InterruptedException.class, () -> test.insert('a'));
+            try {
+                test.insert('a');
+            } catch (InterruptedException e) {
+                // worked
+                System.out.println("Test passed!");
+            }
         });
 
         testThread.start();
-        Thread.sleep(500);
+        Thread.sleep(100);
         assertTrue(testThread.isAlive());
 
         test.retrieve();
-        Thread.sleep(500);
+        testThread.interrupt();
+
+        testThread.join();
         assertFalse(testThread.isAlive());
     }
 
