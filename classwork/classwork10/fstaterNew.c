@@ -16,17 +16,17 @@ int main(int argc, char *argv[])
    if (S_ISREG(info.st_mode))
    {
       // https://linuxopsys.com/topics/inode-in-linux-explained
-      printf("   I-node number:          %ld\n", (long)filestatus.st_ino);
-      printf("   Mode:                   %lo (octal)\n", (unsigned long)filestatus.st_mode);
-      printf("   Link count:             %ld\n", (long)filestatus.st_nlink);
-      printf("   User ID:         %ld\n", (long)filestatus.st_uid);
-      printf("   Group ID:         %ld\n", (long)filestatus.st_gid);
-      printf("   I/O blk size: %ld bytes\n", (long)filestatus.st_size);
-      printf("   Size:              %lld bytes\n", (long long)filestatus.st_size);
-      printf("   Blocks allocated:       %lld\n", (long long)filestatus.st_nlink);
-      printf("   Last status change Timestamp:     %s", ctime(&filestatus.st_ctime));
-      printf("   Last access Timestamp:       %s", ctime(&filestatus.st_atime));
-      printf("   Last modification Timestamp: %s\n\n\n", ctime(&filestatus.st_mtime));
+      printf("   I-node number:          %ld\n", (long)info.st_ino);
+      printf("   Mode:                   %lo (octal)\n", (unsigned long)info.st_mode);
+      printf("   Link count:             %ld\n", (long)info.st_nlink);
+      printf("   User ID:         %ld\n", (long)info.st_uid);
+      printf("   Group ID:         %ld\n", (long)info.st_gid);
+      printf("   I/O blk size: %ld bytes\n", (long)info.st_size);
+      printf("   Size:              %lld bytes\n", (long long)info.st_size);
+      printf("   Blocks allocated:       %lld\n", (long long)info.st_nlink);
+      printf("   Last status change Timestamp:     %s", ctime(&info.st_ctime));
+      printf("   Last access Timestamp:       %s", ctime(&info.st_atime));
+      printf("   Last modification Timestamp: %s\n\n\n", ctime(&info.st_mtime));
    }
    else
    {
