@@ -1,0 +1,42 @@
+
+Detailed Design Document
+CMSI 3510 ~ Operating Systems
+Semester Project
+Evaluation #2
+====================================
+Project: change multiple file names using a single command
+Type:    likely a core utility; possibly a kernel command
+
+Evaluation
+----------
+
+Another good job on this submission
+
+Good for section 2.1
+
+I like the name of the command as you present it in section 2.2, it's
+   descriptive but uses the UNIX naming convention of "rn" for "rename" and
+   tacks on the "all" to that.
+
+   The phrase is actually "...base our command ON the regular..." not OFF ~
+   the use of 'base' means that is something you are building onto, hence
+   not "off"  You actually use "on" correctly in the previous paragraph in
+   this section!  :D
+
+In Section 2.3 ~ good enough; since you're only making a new module, you
+   only need to show that module in this section.  You could make things a
+   bit more specific [detailed?] by describing in text what each of the two
+   fields is for, and how your four functions will each do its job.
+
+   Will you be parsing the regex yourselves, or will you use a library call
+   to parse that to match the file names for input and output?
+
+In Section 2.4 ~ excellent description of how it will work, with good sample
+   commands.  Since there are no command line 'switches', this is all you'll
+   need for this section.
+
+very nice work overall!
+
+An "A" job on this second project deliverable ~ professional-quality
+   work!
+
